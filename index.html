@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parsanjeet | Data analytics and machine learning portfolio</title>
+<meta name="description" content="Parsanjeet is a data analytics and machine learning developer in Delhi. Projects in data cleaning, SQL, Python and Google Gemini, with a live data cleaning demo.">
+<meta property="og:title" content="Parsanjeet | Data analytics and machine learning">
+<meta property="og:description" content="Data cleaning, SQL, Python and AI projects, with a live demo that cleans a messy sheet in your browser.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFFFFF">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%232563EB'/%3E%3Cpath d='M9 18.5h30M9 29.5h30M18.5 9v30M29.5 9v30' stroke='%23fff' stroke-opacity='.6' stroke-width='2.2'/%3E%3Crect x='19.6' y='19.6' width='8.8' height='8.8' rx='1.5' fill='%23F97316'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,300..800&display=swap" rel="stylesheet">
+<!--
+  ==========================================================
+  EDIT HERE: your email, WhatsApp, GitHub username, LinkedIn
+  and resume are set once in the ME object at the bottom of
+  this file (inside <script>). Education is right below it.
+  ==========================================================
+-->
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --ink: #172033;
+    --ink-2: #4B5568;
+    --ink-3: #6B7588;
+    --rule: #E3E8F0;
+    --grid: #EDF1F7;
+    --panel: #F7F9FC;
+    --blue: #2563EB;   --blue-dark: #1D4ED8; --blue-soft: #EEF4FF;
+    --purple: #7C3AED; --purple-dark: #6D28D9; --purple-soft: #F4F0FF;
+    --orange: #EA6C0A; --orange-dark: #C2410C; --orange-soft: #FFF1E3; --orange-flash: #FFD6AA;
+    --green: #15803D;  --green-soft: #EAF7EE;
+    --red: #B5473F;    --red-soft: #FBEDEB;
+    --font: "Anek Latin", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --wrap: 1200px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 18px; line-height: 1.55; overflow-x: hidden; }
+  a { color: var(--blue); text-underline-offset: 3px; }
+  a:hover { color: var(--blue-dark); }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3, h4 { margin: 0; line-height: 1.05; }
+  p { margin: 0; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-weight: 600; font-size: 1.02rem; line-height: 1.2; padding: 13px 22px; border-radius: 10px; border: 2px solid var(--blue); background: var(--blue); color: #fff; text-decoration: none; cursor: pointer; }
+  .btn:hover { background: var(--blue-dark); border-color: var(--blue-dark); color: #fff; }
+  .btn-ghost { background: #fff; color: var(--ink); border-color: #CBD5E1; }
+  .btn-ghost:hover { background: #fff; color: var(--blue); border-color: var(--blue); }
+  .btn-sm { padding: 9px 16px; font-size: .95rem; }
+  .btn-s { font: inherit; font-size: .9rem; font-weight: 600; line-height: 1.2; padding: 7px 12px; border: 1px solid #CBD5E1; border-radius: 8px; background: #fff; color: var(--ink); cursor: pointer; white-space: nowrap; }
+  .btn-s:hover { border-color: var(--blue); color: var(--blue); }
+
+  /* Header */
+  .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+  .site-header .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; font-stretch: 80%; font-size: 1.45rem; line-height: 1; }
+  .brand:hover { color: var(--ink); }
+  .brand svg { width: 30px; height: 30px; flex: none; }
+  .nav { display: flex; gap: 24px; margin-left: auto; }
+  .nav a { color: var(--ink-2); text-decoration: none; font-weight: 500; font-size: .98rem; }
+  .nav a:hover { color: var(--blue); }
+
+  /* Sections */
+  .section { padding: 96px 0; border-top: 1px solid var(--rule); }
+  section[id] { scroll-margin-top: 64px; }
+  .section-head { max-width: 640px; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); font-weight: 700; font-stretch: 75%; }
+  .section-head p { margin-top: 12px; color: var(--ink-2); font-size: 1.12rem; }
+
+  /* ================= HERO ================= */
+  .hero { position: relative; isolation: isolate; padding: 64px 0 80px; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 44px 44px; background-position: -1px -1px; -webkit-mask-image: linear-gradient(#000 35%, transparent 92%); mask-image: linear-gradient(#000 35%, transparent 92%); }
+  .hero-top { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: end; margin-bottom: 44px; }
+  .hero h1 { font-size: clamp(3rem, 7.2vw, 6rem); font-weight: 700; font-stretch: 75%; line-height: .94; letter-spacing: -0.012em; max-width: 10ch; }
+  .hero .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 46ch; }
+  .hero .lede + .lede { margin-top: 10px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .open { margin-top: 18px; font-weight: 600; color: var(--green); font-size: 1rem; }
+
+  /* Lab: the live cleaning demo */
+  .lab { display: grid; grid-template-columns: 268px minmax(0, 1fr); background: #fff; border: 1px solid #D3DAE6; border-radius: 14px; overflow: hidden; box-shadow: 0 34px 64px -44px rgba(23,32,51,.5); }
+  .steps-panel { background: var(--panel); border-right: 1px solid var(--rule); padding: 22px 16px 18px; }
+  .lab-title { font-size: 1.45rem; font-weight: 700; font-stretch: 82%; padding: 0 6px; }
+  .lab-note { margin: 6px 6px 14px; font-size: .9rem; color: var(--ink-3); line-height: 1.4; }
+  .steps { list-style: none; margin: 0; padding: 0; counter-reset: st; }
+  .steps li { counter-increment: st; }
+  .steps label { display: grid; grid-template-columns: 22px minmax(0, 1fr) 36px; gap: 10px; align-items: center; padding: 8px 8px; border-radius: 9px; cursor: pointer; }
+  .steps label:hover { background: #fff; }
+  .steps label::before { content: counter(st); display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: #fff; border: 1px solid var(--rule); font-size: .8rem; font-weight: 700; color: var(--ink-3); }
+  .steps li:has(input:checked) label::before { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .st-text b { display: block; font-size: 1rem; font-weight: 600; line-height: 1.2; }
+  .st-text span { display: block; font-size: .8rem; color: var(--ink-3); line-height: 1.3; margin-top: 1px; }
+  .switch { appearance: none; -webkit-appearance: none; margin: 0; width: 36px; height: 21px; border-radius: 999px; background: #CBD5E1; position: relative; cursor: pointer; transition: background .2s ease; }
+  .switch::before { content: ""; position: absolute; top: 2.5px; left: 2.5px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(23,32,51,.3); transition: transform .2s ease; }
+  .switch:checked { background: var(--blue); }
+  .switch:checked::before { transform: translateX(15px); }
+  .steps-actions { display: flex; gap: 8px; margin: 12px 6px 0; }
+
+  .sheet { display: flex; flex-direction: column; min-width: 0; }
+  .sheet-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 14px 18px; border-bottom: 1px solid var(--rule); }
+  .stats { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+  .stat { display: inline-flex; align-items: baseline; gap: 6px; }
+  .stat b { font-size: 1.55rem; font-weight: 700; font-stretch: 80%; font-variant-numeric: tabular-nums; line-height: 1; }
+  .stat span { font-size: .9rem; color: var(--ink-3); }
+  .stat.out b { color: var(--green); }
+  .stat.fix b { color: var(--orange-dark); }
+  .stat.mis b { color: var(--red); }
+  .stat[hidden] { display: none; }
+  .sheet-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+  .sheet-actions [hidden] { display: none; }
+  .sheet-hint { padding: 9px 18px; font-size: .92rem; color: var(--ink-2); background: var(--blue-soft); border-bottom: 1px solid var(--rule); }
+  .sheet-hint[hidden] { display: none; }
+
+  .paste { display: grid; gap: 10px; padding: 16px 18px; background: #FBFCFE; border-bottom: 1px solid var(--rule); }
+  .paste[hidden] { display: none; }
+  .paste label { font-size: .95rem; color: var(--ink-2); }
+  .paste textarea { width: 100%; font: inherit; font-size: .92rem; font-variant-numeric: tabular-nums; color: var(--ink); padding: 10px 12px; border: 1px solid #CBD5E1; border-radius: 9px; resize: vertical; min-height: 120px; white-space: pre; }
+  .paste textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.18); }
+  .paste-err { color: var(--red); font-weight: 600; font-size: .92rem; }
+  .paste-err:empty { display: none; }
+  .paste-actions { display: flex; gap: 8px; align-items: center; }
+
+  .sheet-scroll { overflow: auto; max-height: 440px; }
+  .grid { border-collapse: separate; border-spacing: 0; width: 100%; min-width: max-content; font-size: .92rem; font-variant-numeric: tabular-nums; }
+  .grid th, .grid td { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 7px 12px; text-align: left; white-space: pre; height: 37px; line-height: 1.3; }
+  .grid th:last-child, .grid td:last-child { border-right: 0; }
+  .grid thead th { position: sticky; top: 0; z-index: 1; background: var(--panel); font-weight: 650; height: auto; padding-top: 9px; padding-bottom: 8px; }
+  .grid thead th small { display: block; font-size: .75rem; font-weight: 500; color: var(--ink-3); }
+  .grid .rn { width: 42px; min-width: 42px; text-align: center; color: var(--ink-3); background: var(--panel); font-weight: 500; padding-left: 6px; padding-right: 6px; }
+  .grid td.num { text-align: right; }
+  .grid td.chg { background: var(--orange-soft); box-shadow: inset 3px 0 0 var(--orange); }
+  .grid td.miss { background: var(--red-soft); color: var(--red); font-style: italic; }
+  .grid td.flash { animation: flash 1s ease; }
+  @keyframes flash { from { background: var(--orange-flash); } }
+  .grid tr.gone td:not(.rn):not(.note) { color: #A2AABB; text-decoration: line-through; background: #FAFBFC; box-shadow: none; }
+  .grid tr.gone td.rn { color: #A2AABB; }
+  .grid tr.gone-new td { animation: goneIn 1s ease; }
+  @keyframes goneIn { from { background: var(--red-soft); } }
+  .grid td.note { font-size: .82rem; font-weight: 600; color: var(--red); white-space: nowrap; }
+  .grid th.note-h { color: var(--ink-3); font-weight: 500; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 12px 18px; border-top: 1px solid var(--rule); font-size: .85rem; color: var(--ink-3); margin-top: auto; }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+  .legend .l-chg i { background: var(--orange-soft); box-shadow: inset 3px 0 0 var(--orange); }
+  .legend .l-mis i { background: var(--red-soft); border: 1px solid #F1C9C4; }
+  .legend .l-gone i { background: #FAFBFC; border: 1px solid var(--rule); position: relative; }
+  .legend .l-gone i::after { content: ""; position: absolute; left: 2px; right: 2px; top: 6px; height: 1.5px; background: #A2AABB; }
+  .lab-foot { margin-top: 14px; font-size: .92rem; color: var(--ink-3); }
+
+  /* ================= PROJECTS ================= */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+  .filters button { font: inherit; font-weight: 600; font-size: .95rem; padding: 8px 16px; border-radius: 999px; border: 1px solid #CBD5E1; background: #fff; color: var(--ink-2); cursor: pointer; }
+  .filters button:hover { border-color: var(--ink); color: var(--ink); }
+  .filters button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .filters button em { font-style: normal; opacity: .65; margin-left: 4px; font-variant-numeric: tabular-nums; }
+  .projects { border-top: 2px solid var(--ink); }
+  .project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr) minmax(0, .85fr); gap: 36px; padding: 32px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 80px; }
+  .project[hidden] { display: none; }
+  .project h3 { font-size: 2rem; font-weight: 700; font-stretch: 76%; line-height: 1.02; }
+  .kind { margin-top: 6px; color: var(--ink-3); font-size: 1rem; line-height: 1.35; }
+  .cats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .cat { font-size: .82rem; font-weight: 650; padding: 3px 9px; border-radius: 6px; }
+  .cat.data { background: var(--blue-soft); color: var(--blue-dark); }
+  .cat.ml { background: var(--purple-soft); color: var(--purple-dark); }
+  .cat.auto { background: var(--orange-soft); color: var(--orange-dark); }
+  .cat.wip { background: var(--panel); color: var(--ink-2); border: 1px solid var(--rule); }
+  .proj-main p { color: var(--ink-2); max-width: 60ch; }
+  .proj-main .demo-link { margin-top: 10px; font-size: 1rem; }
+  .proj-main details { margin-top: 14px; }
+  .proj-main summary { cursor: pointer; font-weight: 650; color: var(--blue); width: fit-content; }
+  .proj-main summary:hover { color: var(--blue-dark); }
+  .proj-main details ol, .proj-main details ul { margin: 12px 0 0; padding-left: 22px; color: var(--ink-2); font-size: .98rem; }
+  .proj-main details li { padding-left: 4px; margin-bottom: 6px; }
+  .proj-main details li::marker { color: var(--ink-3); font-weight: 600; }
+  .tools h4 { font-size: .9rem; font-weight: 600; color: var(--ink-3); margin-bottom: 10px; }
+  .tools ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tools li { font-size: .88rem; font-weight: 600; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 6px; background: #fff; }
+  .proj-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .proj-links:empty { display: none; }
+  .more-work { margin-top: 26px; color: var(--ink-2); }
+
+  /* ================= SKILLS PIPELINE ================= */
+  .pipe { width: 100%; border-collapse: collapse; }
+  .pipe th, .pipe td { text-align: left; vertical-align: top; padding: 22px 24px 22px 0; border-bottom: 1px solid var(--rule); }
+  .pipe td:last-child, .pipe th:last-child { padding-right: 0; }
+  .pipe thead th { font-size: .92rem; font-weight: 600; color: var(--ink-3); padding-top: 0; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+  .stage { display: flex; gap: 14px; align-items: baseline; }
+  .stage i { font-style: normal; font-weight: 700; font-stretch: 75%; font-size: 1.7rem; color: var(--blue); min-width: 1ch; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stage b { font-size: 1.3rem; font-weight: 700; font-stretch: 85%; line-height: 1.15; }
+  .pipe .what { color: var(--ink-2); max-width: 34ch; }
+  .pipe .tl { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+  .pipe .tl li { font-size: .88rem; font-weight: 600; padding: 3px 9px; border-radius: 6px; background: var(--panel); border: 1px solid var(--rule); }
+  .pipe .used { font-size: .95rem; }
+  .pipe .used a { display: block; width: fit-content; white-space: nowrap; }
+  .pipe .c-step { width: 19%; } .pipe .c-what { width: 29%; } .pipe .c-used { width: 17%; }
+
+  /* ================= EXPERIENCE ================= */
+  .timeline { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .timeline li { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 36px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
+  .when { color: var(--ink-3); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .timeline h3 { font-size: 1.6rem; font-weight: 700; font-stretch: 80%; }
+  .timeline .org { margin-top: 4px; font-weight: 600; color: var(--ink-2); }
+  .timeline p.desc { margin-top: 10px; color: var(--ink-2); max-width: 62ch; }
+  .sub-title { margin: 48px 0 16px; font-size: 1.5rem; font-weight: 700; font-stretch: 82%; }
+  .edu-block[hidden] { display: none; }
+
+  /* ================= GITHUB ================= */
+  .repos { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .repo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr) 130px 150px; gap: 24px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+  .repo a { font-weight: 650; font-size: 1.1rem; word-break: break-word; }
+  .repo .rd { color: var(--ink-2); font-size: .98rem; }
+  .repo .rl, .repo .ru { color: var(--ink-3); font-size: .92rem; }
+  .repos-msg { padding: 20px 0; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+  .gh-all { margin-top: 22px; }
+
+  /* ================= CONTACT ================= */
+  .contact h2 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); font-weight: 700; font-stretch: 75%; }
+  .contact > .wrap > p { margin-top: 12px; color: var(--ink-2); font-size: 1.12rem; }
+  .big-mail { display: inline-block; margin-top: 26px; font-size: clamp(1.9rem, 5.6vw, 4.4rem); font-weight: 700; font-stretch: 75%; line-height: 1.05; color: var(--ink); text-decoration-color: var(--blue); text-decoration-thickness: 4px; text-underline-offset: 10px; word-break: break-all; }
+  .big-mail:hover { color: var(--blue); }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 34px 0 0; padding: 0; }
+
+  .site-footer { border-top: 1px solid var(--rule); padding: 28px 0 36px; color: var(--ink-3); font-size: .92rem; }
+  .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
+  .site-footer a { color: var(--ink-2); }
+
+
+  /* ================= MOTION ================= */
+  .progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 50; background: linear-gradient(90deg, var(--blue), var(--purple) 55%, var(--orange)); transform: scaleX(0); transform-origin: left; }
+
+  /* Hero entrance */
+  #kmeans { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; -webkit-mask-image: linear-gradient(#000 0%, #000 42%, transparent 72%); mask-image: linear-gradient(#000 0%, #000 42%, transparent 72%); }
+  .js .hero h1:not(.split) { opacity: 0; }
+  .hero h1 .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .1em; margin-bottom: -.1em; }
+  .hero h1 .w > span { display: inline-block; transform: translateY(110%); animation: rise .85s cubic-bezier(.2,.75,.2,1) forwards; animation-delay: calc(var(--i) * 85ms + 120ms); }
+  @keyframes rise { to { transform: translateY(0); } }
+  .hero-intro > * { opacity: 0; animation: fadeUp .8s ease forwards; }
+  .hero-intro > :nth-child(1) { animation-delay: .55s; }
+  .hero-intro > :nth-child(2) { animation-delay: .7s; }
+  .hero-intro > :nth-child(3) { animation-delay: .85s; }
+  .hero-intro > :nth-child(4) { animation-delay: 1s; }
+  .lab { opacity: 0; animation: panelIn 1.1s cubic-bezier(.2,.75,.2,1) .45s forwards; }
+  .lab-foot { opacity: 0; animation: fadeUp .8s ease 1.2s forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes panelIn { from { opacity: 0; transform: translateY(48px) scale(.97); } to { opacity: 1; transform: none; } }
+  .open { display: flex; align-items: center; gap: 10px; }
+  .open::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--green); animation: pulse 2s ease-out infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(21,128,61,.5); } 70%, 100% { box-shadow: 0 0 0 10px rgba(21,128,61,0); } }
+
+  /* Demo: step switch-on, scan line, ripple, count bump */
+  .steps li.just-on label { animation: stepOn 1.1s ease; }
+  @keyframes stepOn { 0% { background: var(--blue-soft); box-shadow: inset 0 0 0 2px rgba(37,99,235,.4); } }
+  .steps li.just-on label::before { animation: badgePop .5s cubic-bezier(.3,1.6,.5,1); }
+  @keyframes badgePop { from { transform: scale(.55); } }
+  .sheet-scroll { position: relative; }
+  .scan { position: absolute; left: 0; top: 0; height: 80px; z-index: 0; pointer-events: none; opacity: 0; background: linear-gradient(180deg, rgba(37,99,235,0), rgba(37,99,235,.08) 65%, rgba(37,99,235,.28)); border-bottom: 2px solid rgba(37,99,235,.55); }
+  .scan.go { animation: scan 1s cubic-bezier(.45,0,.25,1); }
+  @keyframes scan { 0% { opacity: 1; transform: translateY(-40px); } 85% { opacity: 1; } 100% { opacity: 0; transform: translateY(var(--h, 400px)); } }
+  .grid td.flash { animation: flash 1.1s ease backwards; animation-delay: calc(var(--r, 0) * 55ms); }
+  @keyframes flash { 0% { background: #fff; } 30% { background: var(--orange-flash); } }
+  .grid tr.gone-new td { animation: goneIn 1.1s ease backwards; animation-delay: calc(var(--r, 0) * 55ms); }
+  @keyframes goneIn { 0% { background: #fff; } 30% { background: #F6CFCB; } }
+  .stat b.bump { animation: bump .45s ease; }
+  @keyframes bump { 40% { transform: scale(1.18); } }
+  .stat b { display: inline-block; }
+
+  /* Tools strip */
+  .strip { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 20px 0; background: #fff; }
+  .strip .wrap { display: flex; gap: 30px; align-items: center; }
+  .strip .wrap > p { flex: none; font-weight: 600; color: var(--ink-3); font-size: .95rem; }
+  .marquee { overflow: hidden; flex: 1; min-width: 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .marquee-track { display: flex; width: max-content; animation: marquee 36s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee ul { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0 12px 0 0; }
+  .marquee li { white-space: nowrap; display: inline-flex; align-items: center; gap: 9px; padding: 8px 16px 8px 10px; border-radius: 10px; border: 1px solid var(--rule); background: #fff; font-weight: 650; font-stretch: 90%; font-size: 1.02rem; }
+  .marquee li svg { width: 22px; height: 22px; flex: none; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  .strip + .section { border-top: 0; }
+
+  /* Scroll reveal (only when JavaScript runs) */
+  .js .reveal { opacity: 0; transform: translateY(34px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.75,.2,1); transition-delay: var(--d, 0ms); }
+  .js .reveal.from-left { transform: translateX(-46px); }
+  .js .reveal.pop { transform: scale(.92); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  /* Projects */
+  .project { position: relative; }
+  .project::before { content: ""; position: absolute; left: -18px; top: 32px; bottom: 32px; width: 4px; border-radius: 2px; background: var(--c, var(--blue)); transform: scaleY(0); transform-origin: top; transition: transform .35s ease; }
+  .project:hover::before, .project:focus-within::before { transform: scaleY(1); }
+  .project h3 { transition: transform .3s ease, color .3s ease; }
+  .project:hover h3 { transform: translateX(6px); color: var(--c, var(--ink)); }
+  .project.in .tools li, .project.in .cats .cat { animation: chipPop .5s cubic-bezier(.3,1.5,.5,1) backwards; animation-delay: calc(var(--rd, 0ms) + var(--k, 0) * 70ms + 380ms); }
+  @keyframes chipPop { from { opacity: 0; transform: scale(.6); } }
+  .tools li { transition: border-color .2s ease, color .2s ease, transform .2s ease; }
+  .tools li:hover { border-color: var(--c, var(--blue)); color: var(--c, var(--blue)); transform: translateY(-2px); }
+  .project.refilter { animation: fadeUp .5s ease backwards; animation-delay: calc(var(--fi, 0) * 70ms); }
+
+  /* Pipeline */
+  .pipe tr.in .stage i { animation: numPop .6s cubic-bezier(.3,1.6,.5,1) backwards; animation-delay: calc(var(--pd, 0ms) + 260ms); }
+  @keyframes numPop { from { opacity: 0; transform: scale(.3) translateY(10px); } }
+  .pipe tr.in .tl li { animation: chipPop .45s cubic-bezier(.3,1.5,.5,1) backwards; animation-delay: calc(var(--pd, 0ms) + var(--k, 0) * 60ms + 380ms); }
+  .pipe tbody tr { transition: background .25s ease; }
+  .pipe tbody tr:hover { background: var(--panel); }
+
+  /* GitHub rows */
+  .repo { animation: fadeUp .6s ease backwards; animation-delay: calc(var(--i, 0) * 90ms); }
+
+  /* Contact */
+  .big-mail { text-decoration: none; padding-bottom: 8px; background: linear-gradient(var(--blue), var(--blue)) no-repeat left bottom / 100% 4px; }
+  .js .big-mail.reveal { background-size: 0% 4px; }
+  .js .big-mail.reveal.in { background-size: 100% 4px; transition: opacity .8s ease, transform .8s ease, background-size 1.1s cubic-bezier(.6,0,.2,1) .5s; }
+  .contact-links .btn { transition: transform .2s ease, border-color .2s ease, color .2s ease; }
+  .contact-links .btn:hover { transform: translateY(-3px); }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 1020px) {
+    .hero-top { grid-template-columns: 1fr; gap: 24px; }
+    .hero h1 { max-width: 12ch; }
+    .lab { grid-template-columns: minmax(0, 1fr); }
+    .steps-panel { min-width: 0; border-right: 0; border-bottom: 1px solid var(--rule); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2px 8px; }
+    .project { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+    .project .tools { grid-column: 2; }
+    .repo { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) 110px; }
+    .repo .ru { display: none; }
+  }
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    .nav { display: none; }
+    .site-header .btn { margin-left: auto; }
+    .section { padding: 68px 0; }
+    .hero { padding: 40px 0 60px; }
+    .steps-panel { padding: 16px 0 14px; }
+    .lab-title, .lab-note { padding: 0 16px; margin-left: 0; margin-right: 0; }
+    .steps { display: flex; overflow-x: auto; gap: 8px; padding: 0 16px 4px; scrollbar-width: thin; }
+    .steps label { grid-template-columns: 22px auto 36px; background: #fff; border: 1px solid var(--rule); white-space: nowrap; }
+    .st-text span { display: none; }
+    .steps-actions { margin: 10px 16px 0; }
+    .sheet-bar { padding: 12px 14px; }
+    .sheet-actions { margin-left: 0; }
+    .sheet-scroll { max-height: 400px; }
+    .project { grid-template-columns: 1fr; gap: 14px; padding: 26px 0; }
+    .project .tools { grid-column: auto; }
+    .pipe thead { display: none; }
+    .pipe, .pipe tbody, .pipe tr, .pipe td { display: block; }
+    .pipe tr { padding: 20px 0; border-bottom: 1px solid var(--rule); }
+    .pipe tbody tr:first-child { border-top: 2px solid var(--ink); }
+    .pipe td { border: 0; padding: 0; }
+    .pipe td + td { margin-top: 10px; }
+    .pipe .used a { display: inline; margin-right: 12px; }
+    .timeline li { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+    .repo { grid-template-columns: 1fr; gap: 4px; }
+    .repo .rl { display: block; }
+    .strip .wrap { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .marquee { width: 100%; }
+    .project::before { left: -14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .js .hero h1, .hero h1 .w > span, .hero-intro > *, .lab, .lab-foot, .js .reveal { opacity: 1 !important; transform: none !important; }
+    .js .big-mail.reveal { background-size: 100% 4px !important; }
+    .scan { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 48 48">
+    <rect width="48" height="48" rx="11" fill="#2563EB"/>
+    <path d="M9 18.5h30M9 29.5h30M18.5 9v30M29.5 9v30" stroke="#fff" stroke-opacity=".6" stroke-width="2.2"/>
+    <rect x="19.6" y="19.6" width="8.8" height="8.8" rx="1.5" fill="#F97316">
+      <animate attributeName="x" dur="6.5s" repeatCount="indefinite" keyTimes="0;.16;.2;.36;.4;.56;.6;.76;.8;.96;1" values="19.6;19.6;29.85;29.85;29.85;29.85;9.35;9.35;9.35;9.35;19.6"/>
+      <animate attributeName="y" dur="6.5s" repeatCount="indefinite" keyTimes="0;.16;.2;.36;.4;.56;.6;.76;.8;.96;1" values="19.6;19.6;19.6;19.6;29.85;29.85;29.85;29.85;9.35;9.35;19.6"/>
+    </rect>
+  </symbol>
+  <symbol id="i-n8n" viewBox="0 0 24 24"><path fill="currentColor" d="M4.8 16.8c.45 0 .6-.15.6-.6V15c0-1.8.6-2.4 2.4-2.4H9c1.8 0 2.4.6 2.4 2.4v1.2c0 .45.15.6.6.6s.6-.15.6-.6V15c0-1.8.6-2.4 2.4-2.4h1.2c1.8 0 2.4.6 2.4 2.4v1.2c0 .45.15.6.6.6s.6-.15.6-.6V15c0-1.8.6-2.4 2.4-2.4h1.2c.45 0 .6-.15.6-.6s-.15-.6-.6-.6h-1.2c-1.8 0-2.4-.6-2.4-2.4V7.8c0-.45-.15-.6-.6-.6s-.6.15-.6.6V9c0 1.8-.6 2.4-2.4 2.4H15c-1.8 0-2.4-.6-2.4-2.4V7.8c0-.45-.15-.6-.6-.6s-.6.15-.6.6V9c0 1.8-.6 2.4-2.4 2.4H7.8c-1.8 0-2.4-.6-2.4-2.4V7.8c0-.45-.15-.6-.6-.6s-.6.15-.6.6V9c0 1.8-.6 2.4-2.4 2.4H.6c-.45 0-.6.15-.6.6s.15.6.6.6h1.2c1.8 0 2.4.6 2.4 2.4v1.2c0 .45.15.6.6.6"/></symbol>
+  <symbol id="i-googlegemini" viewBox="0 0 24 24"><path fill="currentColor" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-razorpay" viewBox="0 0 24 24"><path fill="currentColor" d="M22.436 0l-11.91 7.773-1.174 4.276 6.625-4.297L11.65 24h4.391l6.395-24zM14.26 10.098L3.389 17.166 1.564 24h9.008l3.688-13.902Z"/></symbol>
+  <symbol id="i-python" viewBox="0 0 24 24"><path fill="currentColor" d="M11.858 0c-.978.005-1.913.088-2.736.234C6.7.662 6.26 1.558 6.26 3.21v2.182h5.725v.727H4.111c-1.664 0-3.121 1-3.577 2.903-.526 2.181-.549 3.542 0 5.82.407 1.694 1.379 2.902 3.043 2.902h1.969v-2.616c0-1.89 1.635-3.557 3.576-3.557h5.72c1.591 0 2.862-1.31 2.862-2.91v-5.45c0-1.553-1.309-2.718-2.863-2.977A18 18 0 0 0 11.858 0M8.762 1.755c.591 0 1.074.491 1.074 1.095 0 .601-.483 1.087-1.074 1.087A1.08 1.08 0 0 1 7.688 2.85c0-.604.48-1.095 1.074-1.095m9.656 4.364v2.543c0 1.971-1.671 3.63-3.577 3.63H9.122c-1.566 0-2.862 1.34-2.862 2.91v5.452c0 1.551 1.349 2.464 2.862 2.91 1.813.532 3.55.628 5.72 0 1.44-.418 2.862-1.258 2.862-2.91V18.47h-5.719v-.727h8.582c1.664 0 2.284-1.16 2.862-2.903.598-1.793.573-3.518 0-5.819-.41-1.656-1.196-2.903-2.862-2.903zm-3.216 13.807a1.08 1.08 0 0 1 1.074 1.088c0 .604-.48 1.094-1.074 1.094-.592 0-1.075-.49-1.075-1.094 0-.601.483-1.088 1.075-1.088"/></symbol>
+  <symbol id="i-postgresql" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"/></symbol>
+  <symbol id="i-googlesheets" viewBox="0 0 24 24"><path fill="currentColor" d="M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z"/></symbol>
+  <symbol id="i-airtable" viewBox="0 0 24 24"><path fill="currentColor" d="M11.992 1.966c-.434 0-.87.086-1.28.257L1.779 5.917c-.503.208-.49.908.012 1.116l8.982 3.558a3.266 3.266 0 0 0 2.454 0l8.982-3.558c.503-.196.503-.908.012-1.116l-8.957-3.694a3.255 3.255 0 0 0-1.272-.257zM23.4 8.056a.589.589 0 0 0-.222.045l-10.012 3.877a.612.612 0 0 0-.38.564v8.896a.6.6 0 0 0 .821.552L23.62 18.1a.583.583 0 0 0 .38-.551V8.653a.6.6 0 0 0-.6-.596zM.676 8.095a.644.644 0 0 0-.48.19C.086 8.396 0 8.53 0 8.69v8.355c0 .442.515.737.908.54l6.27-3.006.307-.147 2.969-1.436c.466-.22.43-.908-.061-1.092L.883 8.138a.57.57 0 0 0-.207-.044z"/></symbol>
+  <symbol id="i-googledrive" viewBox="0 0 24 24"><path fill="currentColor" d="M12.01 1.485c-2.082 0-3.754.02-3.743.047.01.02 1.708 3.001 3.774 6.62l3.76 6.574h3.76c2.081 0 3.753-.02 3.742-.047-.005-.02-1.708-3.001-3.775-6.62l-3.76-6.574zm-4.76 1.73a789.828 789.861 0 0 0-3.63 6.319L0 15.868l1.89 3.298 1.885 3.297 3.62-6.335 3.618-6.33-1.88-3.287C8.1 4.704 7.255 3.22 7.25 3.214zm2.259 12.653-.203.348c-.114.198-.96 1.672-1.88 3.287a423.93 423.948 0 0 1-1.698 2.97c-.01.026 3.24.042 7.222.042h7.244l1.796-3.157c.992-1.734 1.85-3.23 1.906-3.323l.104-.167h-7.249z"/></symbol>
+  <symbol id="i-docker" viewBox="0 0 24 24"><path fill="currentColor" d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></symbol>
+  <symbol id="i-render" viewBox="0 0 24 24"><path fill="currentColor" d="M18.263.007c-3.121-.147-5.744 2.109-6.192 5.082-.018.138-.045.272-.067.405-.696 3.703-3.936 6.507-7.827 6.507-1.388 0-2.691-.356-3.825-.979a.2024.2024 0 0 0-.302.178V24H12v-8.999c0-1.656 1.338-3 2.987-3h2.988c3.382 0 6.103-2.817 5.97-6.244-.12-3.084-2.61-5.603-5.682-5.75"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.66 3.58 3 8 3s8-1.34 8-3v-13"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></g></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 15h18M9 4v16"/></g></symbol>
+</svg>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Parsanjeet, back to top"><svg aria-hidden="true"><use href="#mark"/></svg>Parsanjeet</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-sm" data-email href="#contact">Email me</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="kmeans" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-top">
+        <h1 id="hero-title">I turn messy data into answers.</h1>
+        <div class="hero-intro">
+          <p class="lede">I'm Parsanjeet, a data analytics and machine learning developer in Delhi. I clean and query data with Excel, SQL and Python, and build AI systems with Google Gemini that act on it.</p>
+          <p class="lede">I also run Parsanjeet Tech, a startup that builds AI automations for Indian businesses.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">See my projects</a>
+            <a class="btn btn-ghost" data-email href="#contact">Email me</a>
+            <a class="btn btn-ghost" data-resume href="#" download>Download resume</a>
+          </div>
+          <p class="open">Open to data analytics and machine learning roles.</p>
+        </div>
+      </div>
+
+      <div class="lab" id="lab">
+        <div class="steps-panel">
+          <h2 class="lab-title">Try it: clean this sheet</h2>
+          <p class="lab-note">The steps run in this order. Switch any one off to see what it does.</p>
+          <ol class="steps">
+            <li><label><span class="st-text"><b>Trim spaces</b><span>Like TRIM() and CLEAN()</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-trim"></label></li>
+            <li><label><span class="st-text"><b>Fix text case</b><span>Names in Proper Case, emails in lowercase</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-case"></label></li>
+            <li><label><span class="st-text"><b>Fix phone numbers</b><span>All in one 10-digit format</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-phone"></label></li>
+            <li><label><span class="st-text"><b>Clean amounts</b><span>₹, Rs and commas out, real numbers in</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-amount"></label></li>
+            <li><label><span class="st-text"><b>Remove blank rows</b><span>Rows with nothing in them</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-blank"></label></li>
+            <li><label><span class="st-text"><b>Remove duplicates</b><span>Works best after steps 1 to 4</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-dupes"></label></li>
+            <li><label><span class="st-text"><b>Flag missing values</b><span>Empty cells, NA, null and -</span></span><input class="switch" type="checkbox" autocomplete="off" id="st-missing"></label></li>
+          </ol>
+          <div class="steps-actions">
+            <button class="btn-s" type="button" id="b-all">Run all steps</button>
+            <button class="btn-s" type="button" id="b-none">Reset</button>
+          </div>
+        </div>
+
+        <div class="sheet">
+          <div class="sheet-bar">
+            <div class="stats" aria-live="polite">
+              <span class="stat"><b id="s-in">0</b><span>rows in</span></span>
+              <span class="stat out"><b id="s-out">0</b><span>rows out</span></span>
+              <span class="stat fix"><b id="s-fix">0</b><span>cells fixed</span></span>
+              <span class="stat mis" id="s-mis-wrap" hidden><b id="s-mis">0</b><span>missing</span></span>
+            </div>
+            <div class="sheet-actions">
+              <button class="btn-s" type="button" id="b-paste">Paste your own data</button>
+              <button class="btn-s" type="button" id="b-sample" hidden>Back to sample</button>
+              <button class="btn-s" type="button" id="b-csv">Download clean CSV</button>
+            </div>
+          </div>
+          <div class="paste" id="paste" hidden>
+            <label for="paste-box">Copy cells from Excel or Google Sheets, including the header row, and paste them here. CSV text works too.</label>
+            <textarea id="paste-box" rows="6" spellcheck="false" placeholder="Name	City	Phone&#10;  rahul sharma	delhi	98100 12345"></textarea>
+            <p class="paste-err" id="paste-err" role="alert"></p>
+            <div class="paste-actions">
+              <button class="btn btn-sm" type="button" id="b-clean">Clean my data</button>
+              <button class="btn-s" type="button" id="b-cancel">Cancel</button>
+            </div>
+          </div>
+          <p class="sheet-hint" id="hint" hidden></p>
+          <div class="sheet-scroll" tabindex="0" role="region" aria-label="Sheet preview">
+            <div class="scan" id="scan" aria-hidden="true"></div>
+            <table class="grid" id="grid"></table>
+          </div>
+          <div class="legend" aria-hidden="true">
+            <span class="l-chg"><i></i>Changed cell (hover to see the old value)</span>
+            <span class="l-mis"><i></i>Missing value</span>
+            <span class="l-gone"><i></i>Removed row</span>
+          </div>
+        </div>
+      </div>
+      <p class="lab-foot">Your pasted data is cleaned in your browser and never uploaded. This demo is a small version of my <a href="#p-cleaner">Data Cleaner</a> tool.</p>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS ================= -->
+  <div class="strip">
+    <div class="wrap">
+      <p>Tools I work with</p>
+      <div class="marquee">
+        <div class="marquee-track" id="tools-track">
+          <ul id="tools-list">
+            <li><svg style="color:#3776AB"><use href="#i-python"/></svg>Python</li>
+            <li><svg style="color:#00758F"><use href="#i-db"/></svg>MySQL</li>
+            <li><svg style="color:#4169E1"><use href="#i-postgresql"/></svg>PostgreSQL</li>
+            <li><svg style="color:#217346"><use href="#i-table"/></svg>Excel</li>
+            <li><svg style="color:#34A853"><use href="#i-googlesheets"/></svg>Google Sheets</li>
+            <li><svg style="color:#8E75B2"><use href="#i-googlegemini"/></svg>Google Gemini</li>
+            <li><svg style="color:#EA4B71"><use href="#i-n8n"/></svg>n8n</li>
+            <li><svg style="color:#18BFFF"><use href="#i-airtable"/></svg>Airtable</li>
+            <li><svg style="color:#003B57"><use href="#i-db"/></svg>SQLite</li>
+            <li><svg style="color:#25D366"><use href="#i-whatsapp"/></svg>WhatsApp Business API</li>
+            <li><svg style="color:#0C2451"><use href="#i-razorpay"/></svg>Razorpay</li>
+            <li><svg style="color:#2496ED"><use href="#i-docker"/></svg>Docker</li>
+            <li><svg style="color:#172033"><use href="#i-render"/></svg>Render</li>
+            <li><svg style="color:#4285F4"><use href="#i-googledrive"/></svg>Google Drive</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Data cleaning, matching, tracking and AI systems I have built. Filter by the kind of work.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="data" aria-pressed="false">Data analytics</button>
+        <button type="button" data-f="ml" aria-pressed="false">Machine learning and AI</button>
+        <button type="button" data-f="auto" aria-pressed="false">Automation</button>
+      </div>
+
+      <!--
+        ADD LINKS HERE: on each <article class="project">, put the GitHub repo
+        in data-code="https://github.com/..." and a live link in data-live="https://...".
+        Buttons appear automatically. Leave them empty to hide the buttons.
+      -->
+      <div class="projects">
+
+        <article class="project" id="p-cleaner" data-cat="data" data-code="" data-live="">
+          <div>
+            <h3>Data Cleaner</h3>
+            <p class="kind">Excel data cleaning tool</p>
+            <div class="cats"></div>
+          </div>
+          <div class="proj-main">
+            <p>Upload a messy Excel sheet and run the usual cleaning steps in one go: blank rows, duplicates, nulls, extra spaces, text case, split columns, find and replace. Every change goes into a log that you can undo. It understands Indian formats and works offline in the browser.</p>
+            <p class="demo-link"><a href="#lab">A small version runs at the top of this page</a></p>
+            <details>
+              <summary>How it works</summary>
+              <ol>
+                <li>Upload an Excel or CSV file.</li>
+                <li>Pick the cleaning steps to run together.</li>
+                <li>Check the change log and undo anything you don't want.</li>
+                <li>Filter, sort and download the clean file.</li>
+              </ol>
+            </details>
+            <div class="proj-links"></div>
+          </div>
+          <div class="tools"><h4>Built with</h4><ul><li>JavaScript</li><li>Excel functions</li><li>HTML and CSS</li></ul></div>
+        </article>
+
+        <article class="project" id="p-flatmate" data-cat="ml auto" data-code="" data-live="">
+          <div>
+            <h3>AI Flatmate Compatibility</h3>
+            <p class="kind">Matching engine with a compatibility score</p>
+            <div class="cats"></div>
+          </div>
+          <div class="proj-main">
+            <p>Scores how well two people would share a flat, as a percentage, from budget, location, sleep schedule and cleanliness. Matched pairs go through automatic ID verification and get a rental agreement template.</p>
+            <details>
+              <summary>How it works</summary>
+              <ol>
+                <li>Preferences come in through an intake form.</li>
+                <li>A Python scoring engine with Gemini calculates the compatibility percentage.</li>
+                <li>When there is a match, n8n runs automatic ID verification with OCR.</li>
+                <li>An intro meetup is scheduled and a rental agreement template is sent.</li>
+              </ol>
+            </details>
+            <div class="proj-links"></div>
+          </div>
+          <div class="tools"><h4>Built with</h4><ul><li>Python</li><li>Google Gemini</li><li>n8n</li><li>SQLite / Airtable</li><li>OCR / ID API</li></ul></div>
+        </article>
+
+        <article class="project" id="p-parking" data-cat="ml auto" data-code="" data-live="">
+          <div>
+            <h3>Smart Parking</h3>
+            <p class="kind">WhatsApp booking bot with live availability</p>
+            <div class="cats"></div>
+          </div>
+          <div class="proj-main">
+            <p>Drivers ask for parking on WhatsApp in plain Hindi or English. Gemini reads the request, PostgreSQL checks which spots are free, Razorpay takes the payment, and owner payouts and the platform commission are logged.</p>
+            <details>
+              <summary>How it works</summary>
+              <ol>
+                <li>n8n captures the driver's location and Gemini understands the request.</li>
+                <li>Live spot availability is checked in the database.</li>
+                <li>The booking is confirmed and a UPI/Razorpay link is sent.</li>
+                <li>Owner payout and platform commission are logged.</li>
+              </ol>
+            </details>
+            <div class="proj-links"></div>
+          </div>
+          <div class="tools"><h4>Built with</h4><ul><li>Google Gemini</li><li>PostgreSQL / Sheets</li><li>n8n</li><li>WhatsApp Business API</li><li>Razorpay</li></ul></div>
+        </article>
+
+        <article class="project" id="p-adspace" data-cat="data auto" data-code="" data-live="">
+          <div>
+            <h3>Hyperlocal Ad-Space</h3>
+            <p class="kind">QR scan tracking and payout calculation</p>
+            <div class="cats"></div>
+          </div>
+          <div class="proj-main">
+            <p>Local brands put trackable QR ads on tea cups, bottles and bags handed out by street vendors. Every scan is tracked live, and each vendor's monthly payout is calculated from the scan data.</p>
+            <details>
+              <summary>How it works</summary>
+              <ol>
+                <li>A brand submits a campaign through a portal.</li>
+                <li>Trackable dynamic QR codes are generated for cups, bottles and bags.</li>
+                <li>Print and delivery orders go to nearby vendors automatically.</li>
+                <li>Scans are tracked live and monthly vendor payouts are calculated.</li>
+              </ol>
+            </details>
+            <div class="proj-links"></div>
+          </div>
+          <div class="tools"><h4>Built with</h4><ul><li>n8n</li><li>Google Gemini</li><li>Dynamic QR API</li><li>Google Sheets</li></ul></div>
+        </article>
+
+        <article class="project" id="p-ems" data-cat="data" data-code="" data-live="">
+          <div>
+            <h3>Team EMS</h3>
+            <p class="kind">Task management with productivity analytics</p>
+            <div class="cats"></div>
+          </div>
+          <div class="proj-main">
+            <p>An employee and task management web app. The admin assigns work and sees productivity reports. Employees update their own tasks while their time is tracked live.</p>
+            <details>
+              <summary>What it does</summary>
+              <ul>
+                <li>Separate admin and employee logins</li>
+                <li>Drag-and-drop task board</li>
+                <li>Live time tracking and instant notifications</li>
+                <li>Productivity analytics for the admin</li>
+                <li>Files kept in Google Drive</li>
+              </ul>
+            </details>
+            <div class="proj-links"></div>
+          </div>
+          <div class="tools"><h4>Built with</h4><ul><li>Web app</li><li>Docker</li><li>Render</li><li>Google Drive</li></ul></div>
+        </article>
+
+        <article class="project" id="p-hirehub" data-cat="ml" data-wip="1" data-code="" data-live="">
+          <div>
+            <h3>HireHub</h3>
+            <p class="kind">AI recruitment system, college project</p>
+            <div class="cats"></div>
+          </div>
+          <div class="proj-main">
+            <p>An AI-powered system for job recruitment and for managing job applications. I'm building it as my college project.</p>
+            <div class="proj-links"></div>
+          </div>
+          <div class="tools"></div>
+        </article>
+      </div>
+
+      <p class="more-work">More web apps I've built, including a CRM and a legal workspace, are on the <a data-company href="#">Parsanjeet Tech website</a>.</p>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From raw data to a working system</h2>
+        <p>What I use at each step, and the projects where I used it.</p>
+      </div>
+      <table class="pipe">
+        <colgroup><col class="c-step"><col class="c-what"><col><col class="c-used"></colgroup>
+        <thead><tr><th scope="col">Step</th><th scope="col">What I do</th><th scope="col">Tools</th><th scope="col">Used in</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="stage"><i>1</i><b>Collect</b></div></td>
+            <td class="what">Bring data in from forms, WhatsApp chats, spreadsheets and APIs.</td>
+            <td><ul class="tl"><li>Google Sheets</li><li>Airtable</li><li>WhatsApp Business API</li><li>Web forms</li><li>REST APIs</li></ul></td>
+            <td class="used"><a href="#p-parking">Smart Parking</a><a href="#p-flatmate">AI Flatmate</a></td>
+          </tr>
+          <tr>
+            <td><div class="stage"><i>2</i><b>Clean</b></div></td>
+            <td class="what">Fix spaces, text case, duplicates, blanks, nulls and mixed formats before anything else.</td>
+            <td><ul class="tl"><li>Excel (TRIM, CLEAN, PROPER, SUBSTITUTE, TEXTSPLIT, IFERROR)</li><li>JavaScript</li><li>Python</li></ul></td>
+            <td class="used"><a href="#p-cleaner">Data Cleaner</a></td>
+          </tr>
+          <tr>
+            <td><div class="stage"><i>3</i><b>Store and query</b></div></td>
+            <td class="what">Keep data in proper tables and pull out what's needed with SQL: joins, GROUP BY, subqueries.</td>
+            <td><ul class="tl"><li>MySQL</li><li>PostgreSQL</li><li>SQLite</li></ul></td>
+            <td class="used"><a href="#p-parking">Smart Parking</a><a href="#p-flatmate">AI Flatmate</a></td>
+          </tr>
+          <tr>
+            <td><div class="stage"><i>4</i><b>Analyze and report</b></div></td>
+            <td class="what">Turn records into counts, trends and reports that people actually read.</td>
+            <td><ul class="tl"><li>Excel</li><li>Google Sheets</li><li>Dashboards</li></ul></td>
+            <td class="used"><a href="#p-ems">Team EMS</a><a href="#p-adspace">Hyperlocal Ad-Space</a></td>
+          </tr>
+          <tr>
+            <td><div class="stage"><i>5</i><b>Model and AI</b></div></td>
+            <td class="what">Score, match and read text with Python and large language models.</td>
+            <td><ul class="tl"><li>Python</li><li>Google Gemini</li><li>OCR</li></ul></td>
+            <td class="used"><a href="#p-flatmate">AI Flatmate</a><a href="#p-parking">Smart Parking</a><a href="#p-hirehub">HireHub</a></td>
+          </tr>
+          <tr>
+            <td><div class="stage"><i>6</i><b>Automate and ship</b></div></td>
+            <td class="what">Run the whole flow on its own and put it online.</td>
+            <td><ul class="tl"><li>n8n</li><li>Docker</li><li>Render</li><li>GitHub Pages</li></ul></td>
+            <td class="used"><a href="#p-adspace">Hyperlocal Ad-Space</a><a href="#p-ems">Team EMS</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2>Experience</h2></div>
+      <ol class="timeline">
+        <li>
+          <p class="when">Oct 2026 to now</p>
+          <div>
+            <h3>Founder</h3>
+            <p class="org">Parsanjeet Tech, Delhi</p>
+            <p class="desc">I build websites, web apps and AI automations for Indian businesses, from WhatsApp bots to CRMs and dashboards. The company is registered with the Ministry of MSME as a micro enterprise (Udyam).</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">About 2 years, current</p>
+          <div>
+            <h3>AI video generation and editing</h3>
+            <p class="org">Grivaa Capital</p>
+            <p class="desc">I create and edit videos using AI video generation tools.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="edu-block" id="edu-block" hidden>
+        <h3 class="sub-title">Education</h3>
+        <ol class="timeline" id="edu"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GITHUB ================= -->
+  <section class="section" id="github">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Code on GitHub</h2>
+        <p>My latest public repositories, loaded live from GitHub.</p>
+      </div>
+      <ul class="repos" id="repos" aria-live="polite"><li class="repos-msg">Loading repositories…</li></ul>
+      <p class="gh-all"><a class="btn btn-ghost btn-sm" data-gh href="#">See all repositories on GitHub</a></p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>Hiring for a data or AI role?</h2>
+      <p>Email is the quickest way to reach me.</p>
+      <a class="big-mail" data-email="text" href="#">your email</a>
+      <ul class="contact-links">
+        <li><a class="btn btn-ghost btn-sm" data-wa href="#">WhatsApp</a></li>
+        <li><a class="btn btn-ghost btn-sm" data-gh href="#">GitHub</a></li>
+        <li><a class="btn btn-ghost btn-sm" data-linkedin href="#">LinkedIn</a></li>
+        <li><a class="btn btn-ghost btn-sm" data-resume href="#" download>Resume</a></li>
+        <li><a class="btn btn-ghost btn-sm" data-company href="#">Parsanjeet Tech</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Parsanjeet, Delhi</span>
+    <span>Hosted on GitHub Pages. <a data-gh href="#">github.com/<span data-gh-name>parsanjeet1</span></a></span>
+  </div>
+</footer>
+
+<script>
+  /* =========================================================
+     EDIT HERE: your details. Leave linkedin or resume as ""
+     to hide those buttons. For the resume, upload resume.pdf
+     to the same repository and write "resume.pdf".
+     ========================================================= */
+  const ME = {
+    email: "parsanjeetk8@gmail.com",
+    whatsapp: "918826124463",
+    github: "parsanjeet1",
+    linkedin: "",
+    resume: "",
+    company: "https://parsanjeet.in"
+  };
+
+  /* EDIT HERE: add your education. Example:
+     { when: "2023 to 2027", what: "B.Tech, Computer Science", where: "College name, Delhi" } */
+  const EDUCATION = [
+  ];
+
+  const $ = (id) => document.getElementById(id);
+  const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const dropLink = (a) => { const li = a.closest("li"); (li && li.parentElement.classList.contains("contact-links") ? li : a).remove(); };
+
+  /* ---------- Contact links ---------- */
+  $$("[data-email]").forEach((a) => { a.href = "mailto:" + ME.email; if (a.dataset.email === "text") a.textContent = ME.email; });
+  $$("[data-wa]").forEach((a) => { a.href = "https://wa.me/" + ME.whatsapp + "?text=" + encodeURIComponent("Hi Parsanjeet, I saw your portfolio."); a.target = "_blank"; a.rel = "noopener"; });
+  $$("[data-gh]").forEach((a) => { a.href = "https://github.com/" + ME.github; a.target = "_blank"; a.rel = "noopener"; });
+  $$("[data-gh-name]").forEach((s) => { s.textContent = ME.github; });
+  $$("[data-company]").forEach((a) => { a.href = ME.company; a.target = "_blank"; a.rel = "noopener"; });
+  $$("[data-linkedin]").forEach((a) => { if (ME.linkedin) { a.href = ME.linkedin; a.target = "_blank"; a.rel = "noopener"; } else dropLink(a); });
+  $$("[data-resume]").forEach((a) => { if (ME.resume) a.href = ME.resume; else dropLink(a); });
+  $("year").textContent = new Date().getFullYear();
+
+  /* ---------- Education ---------- */
+  if (EDUCATION.length) {
+    $("edu").innerHTML = EDUCATION.map((e) => `<li><p class="when">${esc(e.when || "")}</p><div><h3>${esc(e.what || "")}</h3><p class="org">${esc(e.where || "")}</p></div></li>`).join("");
+    $("edu-block").hidden = false;
+  }
+
+  /* ---------- Projects: labels, links, filters ---------- */
+  const CAT_NAME = { data: "Data analytics", ml: "Machine learning and AI", auto: "Automation" };
+  const projects = $$(".project");
+  projects.forEach((p) => {
+    const cats = p.dataset.cat.split(/\s+/).filter(Boolean);
+    let html = cats.map((c) => `<span class="cat ${c}">${CAT_NAME[c]}</span>`).join("");
+    if (p.dataset.wip) html += `<span class="cat wip">In progress</span>`;
+    p.querySelector(".cats").innerHTML = html;
+    p.style.setProperty("--c", cats[0] === "ml" ? "var(--purple)" : cats[0] === "auto" ? "var(--orange-dark)" : "var(--blue)");
+    p.style.setProperty("--rd", projects.indexOf(p) * 70 + "ms");
+    p.querySelectorAll(".cats .cat").forEach((el, k) => el.style.setProperty("--k", k));
+    p.querySelectorAll(".tools li").forEach((el, k) => el.style.setProperty("--k", k + 1));
+    const links = p.querySelector(".proj-links"), name = p.querySelector("h3").textContent;
+    if (p.dataset.code) links.insertAdjacentHTML("beforeend", `<a class="btn btn-ghost btn-sm" href="${esc(p.dataset.code)}" target="_blank" rel="noopener" aria-label="Code for ${esc(name)} on GitHub">Code on GitHub</a>`);
+    if (p.dataset.live) links.insertAdjacentHTML("beforeend", `<a class="btn btn-sm" href="${esc(p.dataset.live)}" target="_blank" rel="noopener" aria-label="Open ${esc(name)}">Open the app</a>`);
+  });
+  const filterBtns = $$(".filters button");
+  filterBtns.forEach((b) => {
+    const f = b.dataset.f;
+    const n = f === "all" ? projects.length : projects.filter((p) => p.dataset.cat.split(/\s+/).includes(f)).length;
+    b.insertAdjacentHTML("beforeend", `<em>${n}</em>`);
+    b.addEventListener("click", () => applyFilter(f));
+  });
+  function applyFilter(f) {
+    filterBtns.forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.f === f)));
+    let fi = 0;
+    projects.forEach((p) => {
+      p.hidden = f !== "all" && !p.dataset.cat.split(/\s+/).includes(f);
+      if (!p.hidden && !reduceMotion) { p.classList.remove("refilter"); void p.offsetWidth; p.style.setProperty("--fi", fi++); p.classList.add("refilter", "in"); }
+    });
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#p-"]');
+    if (a) applyFilter("all");
+  });
+
+  /* ---------- Live data cleaning demo ---------- */
+  const SAMPLE = {
+    headers: ["Name", "City", "Phone", "Email", "Amount (₹)"],
+    rows: [
+      ["  rahul sharma ", "delhi", "98100 12345", "Rahul.S@gmail.com ", "1,200"],
+      ["PRIYA  VERMA", " Noida", "+91-98111-22233", "priya.v@yahoo.in", "₹ 850"],
+      ["", " ", "", "", ""],
+      ["rahul sharma", "Delhi ", "9810012345", "rahul.s@gmail.com", "1200"],
+      ["amit kumar", "GURUGRAM", "098990 45678", "Amit.Kumar@outlook.com", "2,450.50"],
+      ["Neha Gupta", "new delhi", "", "neha.gupta@gmail.com", "Rs. 3,000/-"],
+      ["sana khan ", "lucknow", "9839012345", "SANA.KHAN@GMAIL.COM", "-"],
+      ["Priya Verma", "noida", "9811122233", "PRIYA.V@YAHOO.IN", "850"],
+      ["vikas  yadav", "faridabad", "98 1234 5678", " vikas.y@gmail.com", "1,050"],
+      ["  ", "", "", "", ""]
+    ]
+  };
+  const STEPS = ["trim", "case", "phone", "amount", "blank", "dupes", "missing"];
+  const MISSING = new Set(["", "-", "--", "na", "n/a", "null", "nil", "none", "nan", "#n/a"]);
+  const TYPE_LABEL = { email: "email", phone: "phone", amount: "amount", number: "number", proper: "name or place", text: "text" };
+  const MAX_ROWS = 300, MAX_COLS = 20;
+  let data = SAMPLE, isSample = true, prevVals = new Map(), prevGone = new Set(), auto = null;
+
+  const tidy = (v) => v.replace(/[\u0000-\u001F\u007F​ ]/g, " ").replace(/\s+/g, " ").trim();
+  const proper = (v) => v.toLowerCase().replace(/(^|[\s\-'.(\/])(\p{L})/gu, (m, a, b) => a + b.toUpperCase());
+  const isMissing = (v) => MISSING.has(v.trim().toLowerCase());
+  const phoneDigits = (v) => {
+    if (!/^[+\d\s\-().]+$/.test(v.trim())) return null;
+    const d = v.replace(/\D/g, "");
+    if (d.length < 10 || d.length > 12) return null;
+    const t = d.slice(-10);
+    return /^[6-9]/.test(t) ? t : null;
+  };
+  const cleanPhone = (v) => { const t = phoneDigits(v); return t ? t.slice(0, 5) + " " + t.slice(5) : v; };
+  const AMOUNT_RE = /^(rs\.?|inr|₹)?\s*-?[\d,]+(\.\d+)?\s*(\/-)?$/i;
+  const cleanAmount = (v) => {
+    const s = v.trim();
+    if (isMissing(s)) return s === "" ? v : "";
+    const t = s.replace(/^(rs\.?|inr|₹)\s*/i, "").replace(/\/-$/, "").replace(/[₹,\s]/g, "");
+    return /^-?\d+(\.\d+)?$/.test(t) ? String(parseFloat(t)) : v;
+  };
+
+  function detectTypes(headers, rows) {
+    return headers.map((h, j) => {
+      const vals = rows.map((r) => tidy(r[j] || "")).filter((v) => !isMissing(v));
+      const share = (fn) => (vals.length ? vals.filter(fn).length / vals.length : 0);
+      const H = h.toLowerCase();
+      if (/e-?mail/.test(H) || share((v) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) > 0.5) return "email";
+      if (/phone|mobile|contact|whats ?app|\bcell\b/.test(H) || share((v) => phoneDigits(v) && /[\s\-+()]/.test(v)) > 0.5) return "phone";
+      if (/amount|price|cost|salary|total|revenue|fee|sales|paid|balance|₹|\brs\b|\binr\b/.test(H)) return "amount";
+      if (vals.length && share((v) => AMOUNT_RE.test(v)) > 0.6) return /[₹,]|rs/i.test(vals.join(" ")) ? "amount" : "number";
+      if (/name|city|state|town|district|area|location|country|region|branch|village/.test(H) && !/user ?name|file ?name/.test(H)) return "proper";
+      return "text";
+    });
+  }
+
+  function compute() {
+    const on = {};
+    STEPS.forEach((s) => { on[s] = $("st-" + s).checked; });
+    const types = detectTypes(data.headers, data.rows);
+    const rows = data.rows.map((r, i) => ({ n: i + 1, gone: "", cells: data.headers.map((_, j) => { const v = r[j] == null ? "" : String(r[j]); return { v, o: v, miss: false }; }) }));
+    const each = (fn) => rows.forEach((row) => row.cells.forEach((c, j) => { c.v = fn(c.v, types[j]); }));
+    if (on.trim) each((v) => tidy(v));
+    if (on.case) each((v, t) => (t === "email" ? v.toLowerCase() : t === "proper" ? proper(v) : v));
+    if (on.phone) each((v, t) => (t === "phone" ? cleanPhone(v) : v));
+    if (on.amount) each((v, t) => (t === "amount" || t === "number" ? cleanAmount(v) : v));
+    if (on.blank) rows.forEach((row) => { if (row.cells.every((c) => c.v.trim() === "")) row.gone = "blank row"; });
+    let dupes = 0;
+    if (on.dupes) {
+      const seen = new Map();
+      rows.forEach((row) => {
+        if (row.gone) return;
+        const key = row.cells.map((c) => c.v.toLowerCase()).join("␟");
+        if (seen.has(key)) { row.gone = "duplicate of row " + seen.get(key); dupes++; } else seen.set(key, row.n);
+      });
+    }
+    if (on.missing) rows.forEach((row) => { if (!row.gone) row.cells.forEach((c) => { c.miss = isMissing(c.v); }); });
+    return { on, types, rows, dupes };
+  }
+
+  function render() {
+    const { on, types, rows, dupes } = compute();
+    const nextVals = new Map(), nextGone = new Set();
+    const head = `<thead><tr><th class="rn" scope="col"><span class="sr">Row</span></th>${data.headers.map((h, j) => `<th scope="col">${esc(h)}<small>${TYPE_LABEL[types[j]]}</small></th>`).join("")}<th class="note-h" scope="col">Status</th></tr></thead>`;
+    let fixed = 0, missing = 0;
+    const body = rows.map((row) => {
+      const isNewGone = row.gone && !prevGone.has(row.n) && prevVals.size;
+      if (row.gone) nextGone.add(row.n);
+      const tds = row.cells.map((c, j) => {
+        const key = row.n + ":" + j, changed = c.v !== c.o, cls = [];
+        if (types[j] === "amount" || types[j] === "number") cls.push("num");
+        if (changed && !row.gone) { cls.push("chg"); fixed++; }
+        if (c.miss) { cls.push("miss"); missing++; }
+        const sig = c.v + (c.miss ? "\u0000" : "");
+        if (!reduceMotion && prevVals.has(key) && prevVals.get(key) !== sig && !row.gone) cls.push("flash");
+        nextVals.set(key, sig);
+        const title = changed ? ` title="${esc("Was: “" + c.o + "”")}"` : "";
+        return `<td class="${cls.join(" ")}"${title}>${c.miss ? "missing" : esc(c.v)}</td>`;
+      }).join("");
+      return `<tr style="--r:${row.n - 1}" class="${row.gone ? "gone" : ""}${isNewGone && !reduceMotion ? " gone-new" : ""}"><td class="rn">${row.n}</td>${tds}<td class="note">${row.gone ? "Removed: " + esc(row.gone) : ""}</td></tr>`;
+    }).join("");
+    $("grid").innerHTML = head + "<tbody>" + body + "</tbody>";
+    prevVals = nextVals; prevGone = nextGone;
+
+    countTo($("s-in"), rows.length);
+    countTo($("s-out"), rows.filter((r) => !r.gone).length);
+    countTo($("s-fix"), fixed);
+    countTo($("s-mis"), missing);
+    $("s-mis-wrap").hidden = !on.missing;
+
+    const hint = $("hint");
+    const before = ["trim", "case", "phone", "amount"].filter((s) => !on[s]);
+    if (on.dupes && dupes === 0 && before.length) {
+      hint.textContent = "No exact duplicates found yet. Turn on steps 1 to 4 so that matching rows look the same, then duplicates show up.";
+      hint.hidden = false;
+    } else hint.hidden = true;
+  }
+
+  // Numbers count up to their new value and give a small bump
+  function countTo(el, to) {
+    const from = Number(el.dataset.v || 0);
+    el.dataset.v = to; cancelAnimationFrame(el._raf);
+    if (reduceMotion || from === to) { el.textContent = to; return; }
+    el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
+    const t0 = performance.now(), dur = 550;
+    const tick = (t) => { const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(from + (to - from) * e); if (k < 1) el._raf = requestAnimationFrame(tick); };
+    el._raf = requestAnimationFrame(tick);
+  }
+
+  let userTouched = false, labVisible = false, loopTimer = null;
+  function stopAuto() { if (auto) { clearInterval(auto); auto = null; } if (loopTimer) { clearTimeout(loopTimer); loopTimer = null; } }
+  function userAction() { userTouched = true; stopAuto(); }
+  function flagStep(s) {
+    const li = $("st-" + s).closest("li"), list = li.parentElement;
+    li.classList.remove("just-on"); void li.offsetWidth; li.classList.add("just-on");
+    if (list.scrollWidth > list.clientWidth + 4) {
+      const left = li.getBoundingClientRect().left - list.getBoundingClientRect().left + list.scrollLeft - 16;
+      list.scrollTo({ left: Math.max(0, left), behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  }
+  function scan() {
+    if (reduceMotion) return;
+    const el = $("scan"), g = $("grid");
+    el.style.width = g.offsetWidth + "px";
+    el.style.setProperty("--h", g.offsetHeight + "px");
+    el.classList.remove("go"); void el.offsetWidth; el.classList.add("go");
+  }
+  function setAll(val) { STEPS.forEach((s) => { $("st-" + s).checked = val; }); render(); scan(); }
+  STEPS.forEach((s) => $("st-" + s).addEventListener("change", (e) => { userAction(); if (e.target.checked) flagStep(s); render(); scan(); }));
+  $("b-all").addEventListener("click", () => { userAction(); setAll(true); });
+  $("b-none").addEventListener("click", () => { userAction(); setAll(false); });
+
+  // The sheet cleans itself step by step, waits, turns messy again and repeats,
+  // until the visitor uses any control. Then it stays the way they set it.
+  function autoRun() {
+    if (userTouched) return;
+    if (reduceMotion) { setAll(true); return; }
+    let i = 0;
+    auto = setInterval(() => {
+      if (userTouched) { stopAuto(); return; }
+      const s = STEPS[i++];
+      $("st-" + s).checked = true; flagStep(s); render(); scan();
+      if (i >= STEPS.length) {
+        clearInterval(auto); auto = null;
+        loopTimer = setTimeout(() => {
+          if (userTouched || !isSample) return;
+          setAll(false);
+          const again = () => { if (userTouched) return; if (labVisible) autoRun(); else loopTimer = setTimeout(again, 1000); };
+          loopTimer = setTimeout(again, 1800);
+        }, 4500);
+      }
+    }, 900);
+  }
+  STEPS.forEach((s) => { $("st-" + s).checked = false; });
+  render();
+  if ("IntersectionObserver" in window) {
+    let started = false;
+    new IntersectionObserver((en) => {
+      labVisible = en[0].isIntersecting;
+      if (labVisible && !started) { started = true; setTimeout(autoRun, 1300); }
+    }, { threshold: 0.2 }).observe($("lab"));
+  } else setAll(true);
+
+  // Paste your own data
+  function parseTable(text) {
+    text = text.replace(/\r\n?/g, "\n").replace(/\n+$/, "");
+    const first = text.split("\n")[0];
+    const delim = text.includes("\t") ? "\t" : (first.split(";").length > first.split(",").length ? ";" : ",");
+    const out = []; let row = [], cell = "", q = false;
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (q) {
+        if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+        else cell += ch;
+      } else if (ch === '"' && cell === "") q = true;
+      else if (ch === delim) { row.push(cell); cell = ""; }
+      else if (ch === "\n") { row.push(cell); out.push(row); row = []; cell = ""; }
+      else cell += ch;
+    }
+    row.push(cell); out.push(row);
+    return out;
+  }
+  const pastePanel = $("paste"), pasteErr = $("paste-err");
+  $("b-paste").addEventListener("click", () => { userAction(); pastePanel.hidden = false; pasteErr.textContent = ""; $("paste-box").focus(); });
+  $("b-cancel").addEventListener("click", () => { pastePanel.hidden = true; });
+  $("b-clean").addEventListener("click", () => {
+    const text = $("paste-box").value;
+    if (!text.trim()) { pasteErr.textContent = "Paste a header row and at least one row of data first."; return; }
+    const table = parseTable(text);
+    if (table.length < 2) { pasteErr.textContent = "Only one row was found. Include the header row and at least one row of data."; return; }
+    const width = Math.min(MAX_COLS, Math.max(...table.map((r) => r.length)));
+    const headers = Array.from({ length: width }, (_, i) => tidy(table[0][i] || "") || "Column " + (i + 1));
+    const body = table.slice(1, MAX_ROWS + 1).map((r) => Array.from({ length: width }, (_, i) => r[i] || ""));
+    userAction();
+    data = { headers, rows: body }; isSample = false; prevVals = new Map(); prevGone = new Set();
+    STEPS.forEach((s) => { $("st-" + s).checked = true; });
+    render(); scan();
+    pastePanel.hidden = true; $("b-sample").hidden = false;
+    const notes = [];
+    if (table.length - 1 > MAX_ROWS) notes.push(`Showing the first ${MAX_ROWS} rows.`);
+    if (Math.max(...table.map((r) => r.length)) > MAX_COLS) notes.push(`Showing the first ${MAX_COLS} columns.`);
+    if (notes.length) { $("hint").textContent = notes.join(" "); $("hint").hidden = false; }
+  });
+  $("b-sample").addEventListener("click", () => { userAction(); data = SAMPLE; isSample = true; prevVals = new Map(); prevGone = new Set(); $("b-sample").hidden = true; render(); });
+
+  // Download the cleaned rows as CSV (opens correctly in Excel, ₹ included)
+  $("b-csv").addEventListener("click", () => {
+    if (!userTouched) { userAction(); setAll(true); }
+    const { rows } = compute();
+    const q = (v) => (/[",\n;]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v);
+    const lines = [data.headers.map(q).join(",")].concat(rows.filter((r) => !r.gone).map((r) => r.cells.map((c) => q(c.v)).join(",")));
+    const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = isSample ? "sample-clean.csv" : "clean-data.csv";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  });
+
+  /* ---------- Latest GitHub repositories ---------- */
+  (function () {
+    const list = $("repos");
+    const fallback = (msg) => { list.innerHTML = `<li class="repos-msg">${msg}</li>`; };
+    const ctrl = "AbortController" in window ? new AbortController() : null;
+    const timer = setTimeout(() => ctrl && ctrl.abort(), 8000);
+    fetch(`https://api.github.com/users/${encodeURIComponent(ME.github)}/repos?sort=updated&per_page=20`, { headers: { Accept: "application/vnd.github+json" }, signal: ctrl ? ctrl.signal : undefined })
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((repos) => {
+        clearTimeout(timer);
+        const self = (ME.github + ".github.io").toLowerCase();
+        const shown = repos.filter((r) => !r.fork && r.name.toLowerCase() !== self).slice(0, 6);
+        if (!shown.length) { fallback("No public repositories yet. New projects will show up here as soon as they are public on GitHub."); return; }
+        const fmt = new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "short", year: "numeric" });
+        list.innerHTML = shown.map((r, i) => `<li class="repo" style="--i:${i}"><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.name)}</a><span class="rd">${esc(r.description || "No description yet.")}</span><span class="rl">${esc(r.language || "")}</span><span class="ru">Updated ${fmt.format(new Date(r.pushed_at || r.updated_at))}</span></li>`).join("");
+      })
+      .catch(() => { clearTimeout(timer); fallback("Repositories couldn't be loaded right now. Use the button below to see them on GitHub."); });
+  })();
+  /* ---------- Motion ---------- */
+  // Headline words rise one by one
+  (function () {
+    const h1 = document.querySelector(".hero h1"), text = h1.textContent.trim();
+    h1.setAttribute("aria-label", text);
+    h1.innerHTML = text.split(/\s+/).map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" ");
+    h1.classList.add("split");
+  })();
+
+  // Tools strip: a second copy makes the loop seamless
+  (function () {
+    const list = $("tools-list"), copy = list.cloneNode(true);
+    copy.removeAttribute("id"); copy.setAttribute("aria-hidden", "true");
+    $("tools-track").appendChild(copy);
+  })();
+
+  // Scroll progress bar
+  (function () {
+    const bar = $("progress");
+    const update = () => { const d = document.documentElement, max = d.scrollHeight - d.clientHeight; bar.style.transform = "scaleX(" + (max > 0 ? d.scrollTop / max : 0) + ")"; };
+    addEventListener("scroll", update, { passive: true }); update();
+  })();
+
+  // Sections slide in as they scroll into view
+  (function () {
+    function addReveal(sel, o) {
+      o = o || {};
+      $$(sel).forEach((el) => {
+        el.classList.add("reveal"); if (o.cls) el.classList.add(o.cls);
+        if (o.stagger) el.style.setProperty("--d", Array.prototype.indexOf.call(el.parentElement.children, el) * o.stagger + "ms");
+      });
+    }
+    $$(".pipe tbody tr").forEach((tr, i) => { tr.style.setProperty("--pd", i * 110 + "ms"); tr.querySelectorAll(".tl li").forEach((li, k) => li.style.setProperty("--k", k)); });
+    addReveal(".section-head");
+    addReveal(".filters", { cls: "pop" });
+    addReveal(".project", { cls: "from-left", stagger: 70 });
+    addReveal(".more-work");
+    addReveal(".pipe tbody tr", { stagger: 110 });
+    addReveal(".timeline > li", { stagger: 130 });
+    addReveal(".gh-all");
+    addReveal(".contact h2, .contact > .wrap > p, .big-mail, .contact-links", { stagger: 120 });
+    const els = $$(".reveal");
+    if (!("IntersectionObserver" in window) || reduceMotion) { els.forEach((el) => el.classList.add("in")); return; }
+    const io = new IntersectionObserver((en) => { en.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    els.forEach((el) => {
+      io.observe(el);
+      if (el.classList.contains("big-mail")) return;
+      el.addEventListener("transitionend", function done(ev) {
+        if (ev.target !== el || ev.pseudoElement || ev.propertyName !== "opacity" || !el.classList.contains("in")) return;
+        el.classList.remove("reveal", "from-left", "pop"); el.style.removeProperty("--d"); el.removeEventListener("transitionend", done);
+      });
+    });
+  })();
+
+  // Hero background: points keep regrouping around three moving centres, like k-means clustering
+  (function () {
+    const canvas = $("kmeans"), hero = document.querySelector(".hero"), ctx = canvas.getContext("2d");
+    const COL = ["37,99,235", "124,58,237", "234,108,10"];
+    let W = 0, H = 0, pts = [], cents = [], raf = null, t = 0, mouse = null;
+    function moveCents() { cents.forEach((c) => { c.x = c.cx + Math.cos(t * c.s + c.p) * c.rx; c.y = c.cy + Math.sin(t * c.s * 1.3 + c.p) * c.ry; }); }
+    function size() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = hero.clientWidth; H = hero.clientHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const zone = Math.min(H, 640);
+      const n = Math.max(26, Math.min(84, Math.round((W * zone) / 10500)));
+      cents = [0, 1, 2].map((k) => ({ cx: W * (0.18 + k * 0.32), cy: zone * (0.32 + (k % 2) * 0.24), rx: W * 0.11, ry: zone * 0.17, s: 0.0045 + k * 0.0013, p: k * 2.1, x: 0, y: 0 }));
+      moveCents();
+      pts = Array.from({ length: n }, () => {
+        const a = Math.random() * Math.PI * 2, d = 24 + Math.random() * Math.min(150, W * 0.13);
+        return { x: Math.random() * W, y: Math.random() * zone, vx: 0, vy: 0, ox: Math.cos(a) * d, oy: Math.sin(a) * d, r: 1.8 + Math.random() * 2, k: 0 };
+      });
+      pts.forEach(assign);
+    }
+    function assign(p) {
+      let best = 0, bd = Infinity;
+      cents.forEach((c, k) => { const d = (p.x - c.x) ** 2 + (p.y - c.y) ** 2; if (d < bd) { bd = d; best = k; } });
+      p.k = best;
+    }
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.lineWidth = 1;
+      for (const p of pts) {
+        const c = cents[p.k], d = Math.hypot(p.x - c.x, p.y - c.y);
+        if (d < 230) { ctx.strokeStyle = "rgba(" + COL[p.k] + "," + (1 - d / 230) * 0.14 + ")"; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(c.x, c.y); ctx.stroke(); }
+        if (mouse) { const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y); if (dm < 170) { ctx.strokeStyle = "rgba(" + COL[p.k] + "," + (1 - dm / 170) * 0.5 + ")"; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); } }
+      }
+      for (const p of pts) { ctx.fillStyle = "rgba(" + COL[p.k] + ",0.45)"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill(); }
+      ctx.lineWidth = 2;
+      cents.forEach((c, k) => {
+        ctx.strokeStyle = "rgba(" + COL[k] + ",0.7)";
+        ctx.beginPath(); ctx.arc(c.x, c.y, 8, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(c.x - 15, c.y); ctx.lineTo(c.x - 4, c.y); ctx.moveTo(c.x + 4, c.y); ctx.lineTo(c.x + 15, c.y);
+        ctx.moveTo(c.x, c.y - 15); ctx.lineTo(c.x, c.y - 4); ctx.moveTo(c.x, c.y + 4); ctx.lineTo(c.x, c.y + 15);
+        ctx.stroke();
+      });
+    }
+    function step() {
+      t++; moveCents();
+      for (const p of pts) {
+        assign(p);
+        const c = cents[p.k];
+        p.vx += (c.x + p.ox - p.x) * 0.00016 + (Math.random() - 0.5) * 0.05;
+        p.vy += (c.y + p.oy - p.y) * 0.00016 + (Math.random() - 0.5) * 0.05;
+        p.vx *= 0.975; p.vy *= 0.975;
+        p.x += p.vx; p.y += p.vy;
+      }
+      draw(); raf = requestAnimationFrame(step);
+    }
+    size();
+    if (reduceMotion) { draw(); }
+    else {
+      new IntersectionObserver(([e]) => { if (e.isIntersecting) { if (!raf) raf = requestAnimationFrame(step); } else { cancelAnimationFrame(raf); raf = null; } }).observe(hero);
+      hero.addEventListener("pointermove", (e) => { const r = hero.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+      hero.addEventListener("pointerleave", () => { mouse = null; });
+    }
+    let lastW = W, rt;
+    addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (hero.clientWidth === lastW && Math.abs(hero.clientHeight - H) < 80) return; lastW = hero.clientWidth; size(); if (reduceMotion) draw(); }, 150); });
+  })();
+
+  if (reduceMotion) document.querySelectorAll("svg").forEach((el) => el.pauseAnimations && el.pauseAnimations());
+</script>
+</body>
+</html>
